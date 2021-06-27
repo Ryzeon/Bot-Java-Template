@@ -8,6 +8,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="Casel" />
+        <module name="Bot-Java-Template" />
       </profile>
     </annotationProcessing>
   </component>

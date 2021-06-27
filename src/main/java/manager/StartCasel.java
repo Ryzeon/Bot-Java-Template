@@ -23,7 +23,7 @@ public enum StartCasel {
                 .setDefaultPrefix("/")
                 .build();
         //Set Tokens And Register Listener
-        JDA jdabuilder = JDABuilder.createDefault("ODA2MjY3MDIzMzE1MTczMzc3.YBm8rg.5PUF_AHx5XReIfppEaFQfykpZSk")
+        JDA jdabuilder = JDABuilder.createDefault("yourtokens")
                 .addEventListeners(new CommandListener(commandService))
                 .build();
         //Register All Commands
