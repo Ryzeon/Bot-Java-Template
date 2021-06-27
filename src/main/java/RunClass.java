@@ -8,7 +8,7 @@ import javax.security.auth.login.LoginException;
  * Date: 06/02/2021 @ 22:53
  * Class: StartBot
  */
-public class Casel {
+public class RunClass {
     public static void main(String[] args) throws LoginException {
         //load start class
         StartCasel.INTANCE.startBot();

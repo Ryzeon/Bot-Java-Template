@@ -19,7 +19,7 @@ public class HelpCommand implements Command{
     public void execute(CommandContext ctx) throws Exception {
         final MessageEmbed embed = new EmbedBuilder().setTitle("Casel | Help")
                 .setDescription("**Commands**" + "\n" +
-                        "/Av - You can use this to see other profile photo!" + "\n" +
+                        "/av - You can use this to see other profile photo!" + "\n" +
                         "/clear <amount>- You can use this to clear message!"
                         
                 ).setFooter(ctx.getAuthor().getName() + " | Casel")

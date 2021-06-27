@@ -31,7 +31,6 @@ public enum StartCasel {
         commandService.registerCommand(new AvCommand());
         commandService.registerCommand(new BanCommand());
         commandService.registerCommand(new KickCommand());
-        commandService.registerCommand(new MuteCommand());
         commandService.registerCommand(new ClearCommand());
         commandService.registerCommand(new HelpCommand());
         commandService.registerCommand(new ServerCommand());
