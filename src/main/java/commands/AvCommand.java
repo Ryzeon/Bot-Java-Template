@@ -24,15 +24,14 @@ public class AvCommand implements Command {
     @Override
     public void execute(CommandContext ctx) throws Exception {
         String[] args = ctx.getArguments();
-        if (ctx.getArguments().length == 0) {
+        List<Members> tagsMembers = ctx.getEvent().getMessage().getMentionedMembers();
+        if (tagsMembers.isEmpty()) {
             final MessageEmbed embed = new EmbedBuilder().setImage(ctx.getAuthor().getAvatarUrl()).setDescription(ctx.getMember().getAsMention()).build();
-            ctx.getChannel().sendMessage(embed).queue();
+            ctx.getChannel().sendMessage(embed).queue();   
         } else {
-            for (Member member : ctx.getEvent().getMessage().getMentionedMembers()) {
-                if (args.length == 1) {
-                    final MessageEmbed embed = new EmbedBuilder().setImage(member.getUser().getAvatarUrl()).setDescription(member.getUser().getAsMention()).build();
-                    ctx.getChannel().sendMessage(embed).queue();
-                }
+              for (Member member : tagsMembers) {
+                 final MessageEmbed embed = new EmbedBuilder().setImage(member.getUser().getAvatarUrl()).setDescription(member.getUser().getAsMention()).build();
+                 ctx.getChannel().sendMessage(embed).queue();
             }
         }
     }
